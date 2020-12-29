@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OrganizationComponent } from './organization/organization.component';
 import { PermittedComponent } from './permitted/permitted.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrganizationComponent,
-    PermittedComponent
+    PermittedComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
