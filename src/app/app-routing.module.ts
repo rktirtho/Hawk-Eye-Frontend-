@@ -1,3 +1,5 @@
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 import { OrganizationComponent } from './organization/organization.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule, Component } from '@angular/core';
@@ -6,8 +8,8 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {path: "home", component: HomeComponent },
   {path: "", redirectTo:"home", pathMatch:"full"},
-  {path: "about", component : OrganizationComponent},
-  {path: "contact", component : OrganizationComponent},
+  {path: "about", component : AboutComponent},
+  {path: "contact", component : ContactComponent},
   {path: "organizations", component : OrganizationComponent},
   {path: "organizations", component : OrganizationComponent}
 ];
