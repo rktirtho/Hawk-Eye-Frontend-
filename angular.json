@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
+              "../node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "../node_modules/jquery/dist/jquery.js",
+              "../node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hawk-eye-frontend"
+    }
+  },
+  "defaultProject": "hawk-eye-frontend",
+  "cli": {
+    "analytics": "2fb7e50e-d9ae-4eea-8d0e-fa2dd0d7d110"
+  }
 }
