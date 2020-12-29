@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { OrganizationComponent } from './organization/organization.component';
@@ -10,7 +11,7 @@ const routes: Routes = [
   {path: "", redirectTo:"home", pathMatch:"full"},
   {path: "about", component : AboutComponent},
   {path: "contact", component : ContactComponent},
-  {path: "organizations", component : OrganizationComponent},
+  {path: "login", component : LoginComponent},
   {path: "organizations", component : OrganizationComponent}
 ];
 
