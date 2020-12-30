@@ -1,1 +1,18 @@
-
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Owner</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let org of organizations">
+                <td>{{ org.name }}</td>
+                <td>{{ org.woner }}</td>
+                <td>{{ org.address }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

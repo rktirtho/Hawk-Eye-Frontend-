@@ -15,22 +15,7 @@ const routes: Routes = [
   {path: "organizations", component : OrganizationComponent}
 ];
 
-// const routes: Routes = [
-  
-//   {path : "home", component : HomeComponent},
-//   {path : "", redirectTo:"home", pathMatch : "full"},
-//   {path : "about", component: AboutComponent},
-//   // {path : "experiance", component: EducationComponent},
-//   {path : "education", component: EducationComponent},
-//   {path : "training", component: EducationComponent},
-//   {path : "projects", component: ProjectsComponent},
-//   {path : "skills", component: SkillsComponent},
-//   {path : "experiance", component: EducationComponent},
-//   {path : "contact", component: ContactComponent},
 
-  
-  
-// ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

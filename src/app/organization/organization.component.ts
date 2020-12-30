@@ -1,3 +1,5 @@
+import { OrganizationService } from './../organization.service';
+import { Organization } from './../organization';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./organization.component.css']
 })
 export class OrganizationComponent implements OnInit {
+  organizations: Organization[];
 
-  constructor() { }
+  constructor(private orgService: OrganizationService) { }
 
   ngOnInit(): void {
+    this.getAllOrg();
+  }
+
+  private getAllOrg() {
+    this.orgService.getAllOrg().subscribe(data => {
+      console.log(data.length)
+      this.organizations = data;
+    });
   }
 
 }
