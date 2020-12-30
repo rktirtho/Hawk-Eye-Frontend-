@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class OrganizationService {
-  base_url = "http://localhost:8080/api/organizations"
+  base_url = "http://localhost:8080/api/"
 
 
   constructor(private httpCliend: HttpClient) { }
 
   getAllOrg(): Observable<Organization[]>{
-    return this.httpCliend.get<Organization[]>(`${this.base_url}`);
+    return this.httpCliend.get<Organization[]>(`${this.base_url+"organizations"}`);
   }
 }

@@ -1,3 +1,5 @@
+import { PermittedService } from './../services/permitted.service';
+import { Permitted } from './../model/permitted';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./permitted.component.css']
 })
 export class PermittedComponent implements OnInit {
+  permitteds : Permitted[] 
 
-  constructor() { }
+  constructor(private permittedServic : PermittedService) { }
 
   ngOnInit(): void {
+    this.getAllPermitted()
+  }
+
+  getAllPermitted(){
+    this.permittedServic.getAllPermitted().subscribe(data => {
+      this.permitteds = data
+    });
   }
 
 }
