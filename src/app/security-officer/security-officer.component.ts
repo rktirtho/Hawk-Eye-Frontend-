@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SecurityOfficerService } from '../services/security-officer.service';
+import { SecurityOfficer } from '../model/sucurityOfficer';
 
 @Component({
   selector: 'app-security-officer',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./security-officer.component.css']
 })
 export class SecurityOfficerComponent implements OnInit {
+  securityOff: SecurityOfficer[];
 
-  constructor() { }
+  constructor(private secOffi: SecurityOfficerService) { }
 
   ngOnInit(): void {
+    this.getAllSecurityOfficer()
   }
-
+  private getAllSecurityOfficer() {
+    this.secOffi.getAllSecurity().subscribe(data => {
+      console.log(data.length)
+      this.securityOff = data;
+    });
+  }
 }

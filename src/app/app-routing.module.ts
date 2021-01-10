@@ -1,3 +1,4 @@
+import { SecurityOfficerComponent } from './security-officer/security-officer.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: "contact", component : ContactComponent},
   {path: "login", component : LoginComponent},
   {path: "organizations", component : OrganizationComponent},
+  {path: "securities", component : SecurityOfficerComponent},
   {path: "permitted", component : PermittedComponent}
 ];
 

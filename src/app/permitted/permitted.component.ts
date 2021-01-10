@@ -1,3 +1,4 @@
+import { OrganizationService } from './../organization.service';
 import { PermittedService } from './../services/permitted.service';
 import { Permitted } from './../model/permitted';
 import { Component, OnInit } from '@angular/core';
@@ -10,15 +11,16 @@ import { Component, OnInit } from '@angular/core';
 export class PermittedComponent implements OnInit {
   permitteds : Permitted[] 
 
-  constructor(private permittedServic : PermittedService) { }
+  constructor(private organizationService : PermittedService) { }
 
   ngOnInit(): void {
     this.getAllPermitted()
   }
 
-  getAllPermitted(){
-    this.permittedServic.getAllPermitted().subscribe(data => {
-      this.permitteds = data
+  private getAllPermitted() {
+    this.organizationService.getAllPermitted().subscribe(data => {
+      console.log(data)
+      this.permitteds = data;
     });
   }
 

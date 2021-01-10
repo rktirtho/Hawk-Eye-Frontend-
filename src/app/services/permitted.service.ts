@@ -7,11 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PermittedService {
-  BASE_URL = "localhost:8080/api/"
+  base_url = "http://localhost:8080/api/"
 
   constructor(private httpClient : HttpClient) { }
 
   getAllPermitted() : Observable<Permitted[]>{
-    return this.httpClient.get<Permitted[]>(`${this.BASE_URL+"permitteds"}`);
+    return this.httpClient.get<Permitted[]>(`${this.base_url+"permitteds"}`);
   }
+  
 }

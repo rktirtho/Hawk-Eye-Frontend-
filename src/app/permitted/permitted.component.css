@@ -1,0 +1,6 @@
+.one-line-heading{
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+}

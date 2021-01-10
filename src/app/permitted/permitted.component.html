@@ -1,19 +1,16 @@
-
 <div class="container">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Owner</th>
-                <th>Address</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let permitted of permitteds">
-                <td>{{ permitted.name }}</td>
-                <td>{{ permitted.orgId }}</td>
-                <td>{{ permitted.imageId }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <h2 class="text-center py-5">Employees</h2>
+    <div class="row">
+        <div class="col col-md-2 py-3" *ngFor="let permitted of permitteds">
+            <div class=" card">
+                <img class="rounded mx-auto d-block" src="http://localhost:8080/images/{{ permitted.imageId }}.jpg" style="height: 100px; width: 100px; " />
+                <div class="card-body">
+                    <h5 class="card-title text-center py-0 one-line-heading" title="{{ permitted.name }}">
+                        {{ permitted.name }}</h5>
+                    <p class="card-text text-center">{{ permitted.orgName }}</p>
+                    <a href="#" class="mx-auto d-block btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
