@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SecurityOfficerComponent } from './security-officer/security-officer.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SecurityOfficerComponent } from './security-officer/security-officer.co
     AboutComponent,
     ContactComponent,
     LoginComponent,
-    SecurityOfficerComponent
+    SecurityOfficerComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
