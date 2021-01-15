@@ -1,3 +1,9 @@
+
+  .logo-image{
+    height: 100px;
+    width: 100px;
+}
+
 @keyframes swing {
     0% {
       transform: rotate(0deg);
