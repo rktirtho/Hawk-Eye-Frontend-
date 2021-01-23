@@ -79,6 +79,10 @@ html {
     border-bottom: 2px solid #5fbae9;
   }
   
+  .logo-image{
+    height: 200px;
+    width: 200px;
+  }
   
   
   /* FORM TYPOGRAPHY*/
@@ -261,4 +265,5 @@ html {
   
   #icon {
   }
+
   

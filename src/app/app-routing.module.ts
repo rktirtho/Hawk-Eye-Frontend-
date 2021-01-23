@@ -16,9 +16,9 @@ const routes: Routes = [
   {path: "contact", component : ContactComponent},
   {path: "login", component : LoginComponent},
   {path: "dashboard", component : DashboardComponent},
-  {path: "organizations", component : OrganizationComponent},
-  {path: "securities", component : SecurityOfficerComponent},
-  {path: "permitted", component : PermittedComponent}
+  {path: "dashboard/organizations", component : OrganizationComponent},
+  {path: "dashboard/securities", component : SecurityOfficerComponent},
+  {path: "dashboard/permitted", component : PermittedComponent}
 ];
 
 
