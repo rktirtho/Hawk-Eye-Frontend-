@@ -1,3 +1,4 @@
+import { RecoverAccountComponent } from './recover-account/recover-account.component';
 import { SecurityOfficerComponent } from './security-officer/security-officer.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
@@ -10,15 +11,21 @@ import { PermittedComponent } from './permitted/permitted.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path: "home", component: HomeComponent },
-  {path: "", redirectTo:"home", pathMatch:"full"},
-  {path: "about", component : AboutComponent},
-  {path: "contact", component : ContactComponent},
-  {path: "login", component : LoginComponent},
-  {path: "dashboard", component : DashboardComponent},
-  {path: "dashboard/organizations", component : OrganizationComponent},
-  {path: "dashboard/securities", component : SecurityOfficerComponent},
-  {path: "dashboard/permitted", component : PermittedComponent}
+  { path: "home", component: HomeComponent },
+  { path: "", redirectTo: "home", pathMatch: "full" },
+  { path: "about", component: AboutComponent },
+  { path: "contact", component: ContactComponent },
+  { path: "login", component: LoginComponent },
+  {
+    path: "dashboard", component: DashboardComponent,
+    children: [
+      { path: "organizations", component: OrganizationComponent },
+      { path: "securities", component: SecurityOfficerComponent },
+      { path: "permitted", component: PermittedComponent }
+    ]
+  },
+  { path: "recover-account", component: RecoverAccountComponent }
+
 ];
 
 
