@@ -1,3 +1,4 @@
+import { StrangerComponent } from './stranger/stranger.component';
 import { RecoverAccountComponent } from './recover-account/recover-account.component';
 import { SecurityOfficerComponent } from './security-officer/security-officer.component';
 import { LoginComponent } from './login/login.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
     children: [
       { path: "organizations", component: OrganizationComponent },
       { path: "securities", component: SecurityOfficerComponent },
+      { path: "strangers", component: StrangerComponent },
       { path: "permitted", component: PermittedComponent }
     ]
   },
