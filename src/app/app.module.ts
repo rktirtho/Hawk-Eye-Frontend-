@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SecurityOfficerComponent } from './security-officer/security-officer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RecoverAccountComponent } from './recover-account/recover-account.component';
+import { StrangerComponent } from './stranger/stranger.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RecoverAccountComponent } from './recover-account/recover-account.compo
     LoginComponent,
     SecurityOfficerComponent,
     DashboardComponent,
-    RecoverAccountComponent
+    RecoverAccountComponent,
+    StrangerComponent
   ],
   imports: [
     BrowserModule,
