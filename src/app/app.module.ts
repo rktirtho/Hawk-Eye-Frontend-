@@ -14,6 +14,7 @@ import { SecurityOfficerComponent } from './security-officer/security-officer.co
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RecoverAccountComponent } from './recover-account/recover-account.component';
 import { StrangerComponent } from './stranger/stranger.component';
+import { TodayAccessComponent } from './today-access/today-access.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { StrangerComponent } from './stranger/stranger.component';
     SecurityOfficerComponent,
     DashboardComponent,
     RecoverAccountComponent,
-    StrangerComponent
+    StrangerComponent,
+    TodayAccessComponent
   ],
   imports: [
     BrowserModule,
