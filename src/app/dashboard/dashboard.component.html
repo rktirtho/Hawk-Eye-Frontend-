@@ -118,26 +118,47 @@
             </li>
 
             <li class="header-menu">
-              <span>Extra</span>
+              <span>Statistics</span>
             </li>
             <li>
-              <a href="#">
+              <a routerLink="today-access" routerActive="active">
                 <i class="fa fa-book"></i>
-                <span>Documentation</span>
-                <span class="badge badge-pill badge-primary">Beta</span>
+                <span>Today Access</span>
+                <span class="badge badge-pill badge-primary"></span>
+              </a>
+            </li>
+            <li>
+              <a routerActive="active" routerLink="yesterday-access">
+
+                <i class="fa fa-calendar"></i>
+                <span>Yesterday Access</span>
+              </a>
+            </li>
+            <li>
+              <a routerActive="active" routerLink="organizations">
+                <i class="fa fa-folder"></i>
+                <span>All Access</span>
               </a>
             </li>
             <li>
               <a routerActive="active" routerLink="securities">
 
                 <i class="fa fa-calendar"></i>
-                <span>Securities</span>
+                <span>Authorized Access</span>
               </a>
             </li>
             <li>
-              <a routerActive="active" routerLink="organizations">
-                <i class="fa fa-folder"></i>
-                <span>Organizations</span>
+              <a routerActive="active" routerLink="securities">
+
+                <i class="fa fa-calendar"></i>
+                <span>Unauthorized Access</span>
+              </a>
+            </li>
+            <li>
+              <a routerActive="active" routerLink="securities">
+
+                <i class="fa fa-calendar"></i>
+                <span>Visitors</span>
               </a>
             </li>
           </ul>

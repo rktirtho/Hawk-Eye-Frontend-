@@ -1,3 +1,5 @@
+import { YesterdayAccessComponent } from './yesterday-access/yesterday-access.component';
+import { TodayAccessComponent } from './today-access/today-access.component';
 import { StrangerComponent } from './stranger/stranger.component';
 import { RecoverAccountComponent } from './recover-account/recover-account.component';
 import { SecurityOfficerComponent } from './security-officer/security-officer.component';
@@ -23,7 +25,9 @@ const routes: Routes = [
       { path: "organizations", component: OrganizationComponent },
       { path: "securities", component: SecurityOfficerComponent },
       { path: "strangers", component: StrangerComponent },
-      { path: "permitted", component: PermittedComponent }
+      { path: "permitted", component: PermittedComponent },
+      { path: "today-access", component: TodayAccessComponent },
+      { path: "yesterday-access", component: YesterdayAccessComponent }
     ]
   },
   { path: "recover-account", component: RecoverAccountComponent }
