@@ -15,6 +15,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RecoverAccountComponent } from './recover-account/recover-account.component';
 import { StrangerComponent } from './stranger/stranger.component';
 import { TodayAccessComponent } from './today-access/today-access.component';
+import { YesterdayAccessComponent } from './yesterday-access/yesterday-access.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TodayAccessComponent } from './today-access/today-access.component';
     DashboardComponent,
     RecoverAccountComponent,
     StrangerComponent,
-    TodayAccessComponent
+    TodayAccessComponent,
+    YesterdayAccessComponent
   ],
   imports: [
     BrowserModule,
