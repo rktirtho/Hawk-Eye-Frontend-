@@ -1,3 +1,5 @@
+import { EmployeeMonitoringService } from './../services/employee-monitoring.service';
+import { Permitted } from './../model/permitted';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UnauthrizedAccessComponent implements OnInit {
 
-  constructor() { }
+  emoployees : Permitted[]
+
+  constructor(private empMonService :EmployeeMonitoringService) { }
 
   ngOnInit(): void {
+    this.getUnauthorizedAccessEmployee();
+  }
+
+  getUnauthorizedAccessEmployee(){
+    this.empMonService.getUnauthorizedAccessedEmployee().subscribe(data =>{
+      this.emoployees = data
+    });
   }
 
 }
