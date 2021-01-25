@@ -18,7 +18,6 @@ export class OrganizationComponent implements OnInit {
 
   private getAllOrg() {
     this.orgService.getAllOrg().subscribe(data => {
-      console.log(data.length)
       this.organizations = data;
     });
   }

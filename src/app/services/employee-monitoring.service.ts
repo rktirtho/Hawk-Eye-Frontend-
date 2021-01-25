@@ -1,3 +1,4 @@
+import { Permitted } from './../model/permitted';
 import { EmployeeMonitoring } from './../model/employee-monitoring';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -11,7 +12,22 @@ export class EmployeeMonitoringService {
 
   constructor(private httpClient : HttpClient) { }
 
-  getToday(): Observable<EmployeeMonitoring[]>{
-    return this.httpClient.get<EmployeeMonitoring[]>(`${this.base_url+"monitoring/today"}`);
+  getTodayAccessedEmployee() : Observable<Permitted[]>{
+    return this.httpClient.get<Permitted[]>(`${this.base_url+"monitoring/today"}`);
+  }
+
+  getYesterdayAccessedEmployee() : Observable<Permitted[]>{
+    return this.httpClient.get<Permitted[]>(`${this.base_url+"monitoring/yesterday"}`);
+  }
+
+  getAllAccessedEmployee() : Observable<Permitted[]>{
+    return this.httpClient.get<Permitted[]>(`${this.base_url+"monitoring/access/authorized"}`);
+  }
+
+  getAuthorizedAccessedEmployee() : Observable<Permitted[]>{
+    return this.httpClient.get<Permitted[]>(`${this.base_url+"monitoring/access/unauthorized"}`);
+  }
+  getUnauthorizedAccessedEmployee() : Observable<Permitted[]>{
+    return this.httpClient.get<Permitted[]>(`${this.base_url+"monitoring/today"}`);
   }
 }
