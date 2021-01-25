@@ -17,6 +17,7 @@ import { StrangerComponent } from './stranger/stranger.component';
 import { TodayAccessComponent } from './today-access/today-access.component';
 import { YesterdayAccessComponent } from './yesterday-access/yesterday-access.component';
 import { AuthorizedAccessComponent } from './authorized-access/authorized-access.component';
+import { UnauthrizedAccessComponent } from './unauthrized-access/unauthrized-access.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AuthorizedAccessComponent } from './authorized-access/authorized-access
     StrangerComponent,
     TodayAccessComponent,
     YesterdayAccessComponent,
-    AuthorizedAccessComponent
+    AuthorizedAccessComponent,
+    UnauthrizedAccessComponent
   ],
   imports: [
     BrowserModule,
