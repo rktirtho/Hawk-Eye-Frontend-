@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UnauthrizedAccessComponent implements OnInit {
 
-  emoployees : Permitted[]
+  employees : Permitted[]
 
   constructor(private empMonService :EmployeeMonitoringService) { }
 
@@ -19,7 +19,7 @@ export class UnauthrizedAccessComponent implements OnInit {
 
   getUnauthorizedAccessEmployee(){
     this.empMonService.getUnauthorizedAccessedEmployee().subscribe(data =>{
-      this.emoployees = data
+      this.employees = data
     });
   }
 
