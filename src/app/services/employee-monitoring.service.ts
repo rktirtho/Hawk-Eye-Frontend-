@@ -20,14 +20,14 @@ export class EmployeeMonitoringService {
     return this.httpClient.get<Permitted[]>(`${this.base_url+"monitoring/yesterday"}`);
   }
 
-  getAllAccessedEmployee() : Observable<Permitted[]>{
+  getAuthorizedAccessedEmployee() : Observable<Permitted[]>{
     return this.httpClient.get<Permitted[]>(`${this.base_url+"monitoring/access/authorized"}`);
   }
 
-  getAuthorizedAccessedEmployee() : Observable<Permitted[]>{
+  getUnauthorizedAccessedEmployee() : Observable<Permitted[]>{
     return this.httpClient.get<Permitted[]>(`${this.base_url+"monitoring/access/unauthorized"}`);
   }
-  getUnauthorizedAccessedEmployee() : Observable<Permitted[]>{
+  getAllAccessedEmployee() : Observable<Permitted[]>{
     return this.httpClient.get<Permitted[]>(`${this.base_url+"monitoring/today"}`);
   }
 }

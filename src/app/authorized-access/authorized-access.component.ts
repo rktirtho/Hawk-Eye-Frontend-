@@ -1,3 +1,5 @@
+import { EmployeeMonitoringService } from './../services/employee-monitoring.service';
+import { Permitted } from './../model/permitted';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthorizedAccessComponent implements OnInit {
 
-  constructor() { }
+  employees : Permitted[]
+
+  constructor(private empMonService:EmployeeMonitoringService) { }
 
   ngOnInit(): void {
+    this.getAuthorizedAccess();
+  }
+
+  getAuthorizedAccess(){
+    this.empMonService.getAuthorizedAccessedEmployee().subscribe(data =>{
+      this.employees = data
+    });
   }
 
 }
