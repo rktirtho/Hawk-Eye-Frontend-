@@ -31,7 +31,8 @@ const routes: Routes = [
       { path: "today-access", component: TodayAccessComponent },
       { path: "yesterday-access", component: YesterdayAccessComponent },
       { path: "authorized-access", component: AuthorizedAccessComponent },
-      { path: "unauthorized-access", component: UnauthrizedAccessComponent }
+      { path: "unauthorized-access", component: UnauthrizedAccessComponent },
+      { path: "visitors", component: StrangerComponent }
     ]
   },
   { path: "recover-account", component: RecoverAccountComponent }
