@@ -1,12 +1,14 @@
 <div class="container">
-    <h2 class="text-center py-5">Authorized Access</h2>
+    <h2 class="text-center py-1">Strangers</h2>
     <div class="row">
-        <div class="col col-md-2 py-3" *ngFor="let permitted of employees">
+        <div class="col col-md-3 py-3" *ngFor="let stranger of strangers">
             <div class=" card">
-                <img class="rounded mx-auto d-block" src="http://localhost:8080/images/{{ permitted.imageId }}.jpg" style="height: 100px; width: 100px; " />
+                <img class="rounded mx-auto d-block" src="http://localhost:8080/images/{{ stranger.image }}.jpg" style="height: 100px; width: 100px; " />
                 <div class="card-body">
-                    <p class="card-title text-center py-0 one-line-heading" title="{{ permitted.name }}">
-                        {{ permitted.name }}</p>
+                    <p class="card-title text-center py-0 one-line-heading" title="{{ stranger.image }}">
+                        {{ stranger.image }}</p>
+                        {{ stranger.time }}<br/>
+                        Visited: {{ stranger.visited }}
                     <a href="#" class="mx-auto d-block btn btn-primary">View</a>
                 </div>
             </div>

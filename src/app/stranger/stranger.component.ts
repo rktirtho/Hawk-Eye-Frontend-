@@ -1,4 +1,6 @@
+import { StrangerService } from './../services/stranger.service';
 import { Component, OnInit } from '@angular/core';
+import { Stranger } from '../model/stranger';
 
 @Component({
   selector: 'app-stranger',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StrangerComponent implements OnInit {
 
-  constructor() { }
+  strangers : Stranger[]
+
+  constructor(private strangerService : StrangerService) { }
 
   ngOnInit(): void {
+    this.getAllStrangers()
+  }
+
+  getAllStrangers(){
+    this.strangerService.getAllStrangers().subscribe(data =>{
+      this.strangers = data
+
+    });
   }
 
 }
